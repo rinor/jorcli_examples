@@ -3,13 +3,32 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/rinor/jorcli_examples)](https://goreportcard.com/report/github.com/rinor/jorcli_examples)
 [![License MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](LICENSE)
 
+## Networked examples
+
 1) [node_genesis_bootstrap_and_run](#genesis-node-bootstrap-and-run)
 2) [node_genesis_stakepool_run](#genesis-stakepool-node-run)
 3) [node_stakepool_create_and_run](#stakepool-node-create-and-run)
 4) [node_passive_run](#passive-node-run)
-5) [jcli_rest_v0](#jcli-rest-v0)
-6) [jcli_bulk_send_sequential](#jcli-bulk-send-sequential)
-7) [jcli_bulk_send_concurrent](#jcli-bulk-send-concurrent) - TBD
+
+Here are some visuals related to the network.
+
+![Trusted relationship](img/trusted.png)
+
+This shows how **trusted** relationship is configured.
+
+![Network relationship](img/normal.png)
+
+This shows the network logical connections, once the network is up and running.
+
+![Pool move](img/move.png)
+
+This shows and attempt that will try to move **live** an active pool to another passive node, once the network is up and running. (TBD)
+
+## Interacting tools examples
+
+1) [jcli_rest_v0](#jcli-rest-v0)
+2) [jcli_bulk_send_sequential](#jcli-bulk-send-sequential)
+3) [jcli_bulk_send_concurrent](#jcli-bulk-send-concurrent) - TBD
 
 ## Genesis Node Bootstrap And Run
 

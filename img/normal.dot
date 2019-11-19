@@ -1,0 +1,19 @@
+digraph G {
+    rankdir = LR;
+
+	"GenesisPool [1]" [fillcolor=cyan, style="filled"]
+	"ExtraPool [2]"   [fillcolor=cadetblue1, style="filled"]
+	"DynPool [3]"     [fillcolor=cadetblue1, style="filled"]
+	"Passive [4]"     [fillcolor=grey, style="filled"]
+	
+    subgraph cluster_connections {
+        color = lightgrey;
+        label = "normal logical connections";
+        node [ style = filled; color = cadetblue1 ];
+
+        "GenesisPool [1]" -> "ExtraPool [2]" -> "DynPool [3]" -> "Passive [4]" [style = dotted, label = "", dir = none] ;
+        "GenesisPool [1]" -> "DynPool [3]"   [style = dotted, label = "", dir = none] ;
+        "GenesisPool [1]" -> "Passive [4]"   [style = dotted, label = "", dir = none] ;
+        "ExtraPool [2]"   -> "Passive [4]"   [style = dotted, label = "", dir = none] ;
+    }
+}

@@ -1,0 +1,16 @@
+digraph G {
+    rankdir = LR;
+
+	"GenesisPool [1]" [fillcolor=cyan, style="filled"]
+	"ExtraPool [2]"   [fillcolor=cadetblue1, style="filled"]
+	"DynPool [3]"     [fillcolor=cadetblue1, style="filled"]
+	"Passive [4]"     [fillcolor=grey, style="filled"]
+	
+    subgraph cluster_trusted {
+        color = lightgrey;
+        label = "Trusted Relationship";
+        node [ style = filled; color = cadetblue1 ];
+
+        "GenesisPool [1]" -> "ExtraPool [2]" -> "DynPool [3]" -> "Passive [4]" [label = "trust", color=green, dir = back] ;
+    }
+}
